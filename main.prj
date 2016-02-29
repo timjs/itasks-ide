@@ -7,7 +7,7 @@ Global
 		CheckStacks:	False
 		CheckIndexes:	True
 	Application
-		HeapSize:	2097152
+		HeapSize:	20971520
 		StackSize:	512000
 		ExtraMemory:	8192
 		IntialHeapSize:	204800
@@ -38,12 +38,12 @@ Global
 		GenerateDLL:	False
 		ExportedNames:	
 	Paths
-		Path:	{Project}/src
+		Path:	{Project}/Sources
 	Precompile:	
 	Postlink:	
 MainModule
 	Name:	Main
-	Dir:	{Project}/src
+	Dir:	{Project}/Sources
 	Compiler
 		NeverMemoryProfile:	False
 		NeverTimeProfile:	False
@@ -56,6 +56,20 @@ MainModule
 		ReuseUniqueNodes:	True
 		Fusion:	False
 OtherModules
+	Module
+		Name:	Extensions.Ace
+		Dir:	{Project}/Sources
+		Compiler
+			NeverMemoryProfile:	False
+			NeverTimeProfile:	False
+			StrictnessAnalysis:	True
+			ListTypes:	StrictExportTypes
+			ListAttributes:	True
+			Warnings:	True
+			Verbose:	True
+			ReadableABC:	False
+			ReuseUniqueNodes:	True
+			Fusion:	False
 	Module
 		Name:	StdDynamic
 		Dir:	{Application}/lib/Dynamics
@@ -1918,7 +1932,7 @@ OtherModules
 			ReuseUniqueNodes:	True
 			Fusion:	False
 	Module
-		Name:	iTasks.API.Extensions.Clock
+		Name:	iTasks.API.Extensions.CodeMirror
 		Dir:	{Application}/lib/iTasks-SDK/Server
 		Compiler
 			NeverMemoryProfile:	False
