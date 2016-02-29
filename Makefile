@@ -1,10 +1,14 @@
 default:
 	cpm main.prj
 
+run: default
+	./main.exe
+
 force:
 	cpm main.prj --force
 
 clean:
-	rm -rf sapl Clean\ System\ Files main.exe main-data
+	rm -rv $(find . -name "Clean System Files")
+	rm -rv main.exe main-data sapl
 
-.PHONY: clean
+.PHONY: run force clean
