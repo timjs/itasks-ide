@@ -17,7 +17,7 @@ import iTasks.API.Core.Client.Editlet
     , position :: Position //FIXME multiple cursors?
     , selection :: Maybe Region
     , highlights :: [Region]
-    , source :: String //FIXME
+    , source :: [String] //FIXME
     }
 :: AceDiff = AceDiff //TODO
 
