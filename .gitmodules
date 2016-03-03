@@ -1,0 +1,3 @@
+[submodule "WebPublic/ace"]
+	path = WebPublic/ace
+	url = https://github.com/ajaxorg/ace-builds.git
